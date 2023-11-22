@@ -8,10 +8,8 @@ get_latest_release() {
 
 export LAST_VERSION=$(grep '"version":')
 export VERSION=$(get_latest_release)
-export NEWVERSION=\"version\": \""$VERSION"\",
+export NEWVERSION="\"version\": \"$VERSION\","
 sed -i "s|$LAST_VERSION|$NEWVERSION|g" manifest.json
-sleep 10s
-#v3.2.0
 
 wget -O cinny.tar.gz "https://github.com/cinnyapp/cinny/releases/download/$VERSION/cinny-$VERSION.tar.gz"
 tar -xzf cinny.tar.gz
