@@ -1,5 +1,4 @@
 {
-
   "manifest_version": 3,
   "name": "Cinny for Firefox",
   "description": "Join a Matrix chat without leaving Firefox",
@@ -9,22 +8,17 @@
       "strict_min_version": "54.0a1"
     }
   },
-
   "sidebar_action": {
     "default_icon": "icons/star.png",
     "default_title" : "Cinny for Firefox",
     "default_panel": "sidebar/index.html",
     "open_at_install": true
   },
-
   "action": {
     "default_icon": "icons/star.png",
-    "default_title": "Cinny for Firefox",
-    "default_popup": "sidebar/index.html"
+    "default_title": "Cinny for Firefox"
   },
-
   "permissions": ["storage", "tabs"],
-
   "commands": {
     "_execute_sidebar_action": {
       "suggested_key": {
@@ -38,10 +32,7 @@
       "js": ["./sidebar/assets/index-cb0350e9.js", "./sidebar/assets/Math-16a7b74b.js"]
     }
   ],
-  "background_scripts": [
-    {
-      "js": ["./background.js"]
-    }
-  ]
-
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
