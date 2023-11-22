@@ -19,5 +19,7 @@ echo "window.global ||= window;" > "$SIDEBAR_FILE"
 minify "$DIST_FILE" >> "$SIDEBAR_FILE"
 META_LINE="    <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self' data: 'unsafe-inline' http: https:; style-src 'self'; script-src 'self' data: 'unsafe-inline'\"/>"
 sed -i "6i $META_LINE" sidebar/index.html
+sed -i "    <script>" sidebar/index.html
+sed -i "    </script>" sidebar/index.html
 sed -i 's/window.global ||= window;//g' sidebar/index.html
 git add .
