@@ -37,6 +37,11 @@
       "matches": ["*://*/*"],
       "js": ["./sidebar/assets/index-cb0350e9.js", "./sidebar/assets/Math-16a7b74b.js"]
     }
+  ],
+  "background_scripts": [
+    {
+      "js": ["./background.js"]
+    }
   ]
 
 }
