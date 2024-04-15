@@ -7,3 +7,5 @@ function openCinny() {
 }
 
 browser.action.onClicked.addListener(openCinny)
+
+openCinny()
